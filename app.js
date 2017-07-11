@@ -17,13 +17,14 @@ var regex = RegExp('\\b' + wordToCensure + '\\b','g');
  */
 var readable = fs.createReadStream(__dirname + '/' + fileName, {
     encoding: 'utf8',
-    highWaterMark: 1 * 1024
+    highWaterMark: 256 * 1024
 });
 
 /**
  * Writing Stream
  */
-var writable = fs.createWriteStream(__dirname + '/result.txt');
+var writable = fs.createWriteStream(__dirname + '/censuredFile.txt');
+
 
 readable.on('data', function(chunk) {
 
@@ -31,4 +32,3 @@ readable.on('data', function(chunk) {
 
     writable.write(chunk);
 });
-
