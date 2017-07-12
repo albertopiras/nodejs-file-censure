@@ -8,8 +8,8 @@ var fs = require('fs');
 
     var tempCensured = myfile.replace(regex, "***");
 
-    fs.writeFile("syncOutput.txt", tempCensured, function (err) {
-        console.log("Stream Reading:");
+    fs.writeFile(__dirname + "/output/syncOutput.txt", tempCensured, function (err) {
+        console.log("Sync Mode:");
         console.timeEnd('timerSync');
         console.log("--------------------");
     });

@@ -16,7 +16,7 @@ module.exports = function (fileName, regex) {
         /**
          * Writing Stream
          */
-        var writable = fs.createWriteStream(__dirname + '/streamOutput.txt');
+        var writable = fs.createWriteStream(__dirname + '/output/streamOutput.txt');
 
         readable.on('data', function (chunk) {
             chunk = chunk.replace(regex, "***");
