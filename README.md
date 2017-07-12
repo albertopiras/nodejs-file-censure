@@ -55,7 +55,7 @@ The console output will be similar to this.
      
 You'll see that with big files (eg 20MB) the stream approach is faster than sync approach. 
 
-### Run Performance comparizion
+### Run Performance comparison
 
 To run performance comparison follow the instructions:
 ```sh
