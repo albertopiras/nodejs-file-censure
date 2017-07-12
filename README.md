@@ -28,14 +28,14 @@ $ node app.js examples/song.txt ass
 This will give back to you the `censuredFile.txt`
 
 
-### Performance comparison 
+## Performance comparison 
 Under performance-comparision folder you will find two different approaches to censure a file.
 
 The  first example will use the stream approach of this project, piece per piece, replacing for each part the occurrence of the specified word.
 
 The second example will read synchronously the whole file and will search and replace all occurrence of the specified word.
 
-#### How is performance-comparison structured
+### How is performance-comparison structured
 
 There are two modules for the two different approaches, "streamApproach" and "syncApproach".
 
@@ -55,7 +55,7 @@ The console output will be similar to this.
      
 You'll see that with big files (eg 20MB) the stream approach is faster than sync approach. 
 
-#### Run Performance comparizion
+### Run Performance comparizion
 
 To run performance comparison follow the instructions:
 ```sh
@@ -92,6 +92,6 @@ $ node comparison.js ../example/song-100MB.txt glass
 
 The more the file is big, the more the stream approach is efficent.
 
-### License ###
+## License
 
 MIT
